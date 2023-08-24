@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ctsnmmhrnsjmg"
+path="res://.godot/imported/construction_barrier.obj-0880d4949936b5e0e66c001890a1aed5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/construction_barrier.obj-0880d4949936b5e0e66c001890a1aed5.mesh"]
+
+source_file="res://models/kenney_city-kit-roads/Models/OBJ format/construction_barrier.obj"
+dest_files=["res://.godot/imported/construction_barrier.obj-0880d4949936b5e0e66c001890a1aed5.mesh", "res://.godot/imported/construction_barrier.obj-0880d4949936b5e0e66c001890a1aed5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

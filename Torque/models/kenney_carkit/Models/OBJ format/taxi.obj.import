@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/taxi.obj-933050fdf6dba7efea227f0cea49d57d.mesh"
+
+[deps]
+
+files=[ "res://.import/taxi.obj-933050fdf6dba7efea227f0cea49d57d.mesh" ]
+
+source_file="res://models/kenney_carkit/Models/OBJ format/taxi.obj"
+dest_files=[ "res://.import/taxi.obj-933050fdf6dba7efea227f0cea49d57d.mesh", "res://.import/taxi.obj-933050fdf6dba7efea227f0cea49d57d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

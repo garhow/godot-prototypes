@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dqdayxokgu61f"
+path="res://.godot/imported/light_curved.obj-453f69a57b06090443d0aff8d6790c38.mesh"
+
+[deps]
+
+files=["res://.godot/imported/light_curved.obj-453f69a57b06090443d0aff8d6790c38.mesh"]
+
+source_file="res://models/kenney_city-kit-roads/Models/OBJ format/light_curved.obj"
+dest_files=["res://.godot/imported/light_curved.obj-453f69a57b06090443d0aff8d6790c38.mesh", "res://.godot/imported/light_curved.obj-453f69a57b06090443d0aff8d6790c38.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

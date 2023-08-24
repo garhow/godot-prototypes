@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ca78nh415neu8"
+path="res://.godot/imported/road_sideEntry.obj-20191fc689324057c8414851fc98226c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_sideEntry.obj-20191fc689324057c8414851fc98226c.mesh"]
+
+source_file="res://models/kenney_city-kit-roads/Models/OBJ format/road_sideEntry.obj"
+dest_files=["res://.godot/imported/road_sideEntry.obj-20191fc689324057c8414851fc98226c.mesh", "res://.godot/imported/road_sideEntry.obj-20191fc689324057c8414851fc98226c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

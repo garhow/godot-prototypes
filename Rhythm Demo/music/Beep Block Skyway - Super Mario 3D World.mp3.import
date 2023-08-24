@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://byebwecbfqtyw"
+path="res://.godot/imported/Beep Block Skyway - Super Mario 3D World.mp3-c6e60c27ab13d8aaf9ee8b16b5cec19b.mp3str"
+
+[deps]
+
+source_file="res://music/Beep Block Skyway - Super Mario 3D World.mp3"
+dest_files=["res://.godot/imported/Beep Block Skyway - Super Mario 3D World.mp3-c6e60c27ab13d8aaf9ee8b16b5cec19b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

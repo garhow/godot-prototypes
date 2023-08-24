@@ -1,0 +1,118 @@
+[gd_scene load_steps=5 format=3 uid="uid://c03d8w08fxgca"]
+
+[ext_resource type="Script" path="res://scripts/controllers/bunny.gd" id="1_d41rr"]
+[ext_resource type="Texture2D" uid="uid://ba1l7m411apbr" path="res://icon.png" id="2_wbht8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sk1wm"]
+animations = [{
+"frames": [ExtResource( "2_wbht8" )],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nerx0"]
+radius = 32.0
+
+[node name="Bunny" type="CharacterBody2D"]
+script = ExtResource( "1_d41rr" )
+
+[node name="Camera" type="Camera2D" parent="."]
+rotating = true
+current = true
+zoom = Vector2(2, 2)
+smoothing_enabled = true
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+frames = SubResource( "SpriteFrames_sk1wm" )
+animation = &"Idle"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource( "CircleShape2D_nerx0" )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Debug" type="Control" parent="HUD"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Margin" type="MarginContainer" parent="HUD/Debug"]
+offset_right = 248.0
+offset_bottom = 125.0
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="List" type="VBoxContainer" parent="HUD/Debug/Margin"]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 256.0
+offset_bottom = 345.0
+
+[node name="Label" type="Label" parent="HUD/Debug/Margin/List"]
+offset_right = 224.0
+offset_bottom = 37.0
+theme_override_font_sizes/font_size = 24
+text = "Debug Information"
+
+[node name="Separator" type="HSeparator" parent="HUD/Debug/Margin/List"]
+offset_top = 41.0
+offset_right = 224.0
+offset_bottom = 45.0
+
+[node name="Physics" type="Label" parent="HUD/Debug/Margin/List"]
+offset_top = 49.0
+offset_right = 224.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 20
+text = "Physics"
+
+[node name="Distance" type="Label" parent="HUD/Debug/Margin/List"]
+offset_top = 84.0
+offset_right = 224.0
+offset_bottom = 110.0
+text = "Distance to Nearest Planet: 0"
+
+[node name="Gravitational Force" type="Label" parent="HUD/Debug/Margin/List"]
+offset_top = 114.0
+offset_right = 224.0
+offset_bottom = 140.0
+text = "Gravitational Force: 0"
+
+[node name="Planet" type="Label" parent="HUD/Debug/Margin/List"]
+offset_top = 144.0
+offset_right = 224.0
+offset_bottom = 170.0
+text = "Nearest Planet: --"
+
+[node name="Velocity" type="Label" parent="HUD/Debug/Margin/List"]
+offset_top = 174.0
+offset_right = 224.0
+offset_bottom = 200.0
+text = "Velocity: (0, 0)"
+
+[node name="Separator2" type="HSeparator" parent="HUD/Debug/Margin/List"]
+offset_top = 204.0
+offset_right = 224.0
+offset_bottom = 208.0
+
+[node name="Input" type="Label" parent="HUD/Debug/Margin/List"]
+offset_top = 212.0
+offset_right = 224.0
+offset_bottom = 243.0
+theme_override_font_sizes/font_size = 20
+text = "Input"
+
+[node name="Grounded" type="CheckBox" parent="HUD/Debug/Margin/List"]
+offset_top = 247.0
+offset_right = 224.0
+offset_bottom = 278.0
+text = "Grounded"
+
+[node name="Jumping" type="CheckBox" parent="HUD/Debug/Margin/List"]
+offset_top = 282.0
+offset_right = 224.0
+offset_bottom = 313.0
+text = "Jumping"

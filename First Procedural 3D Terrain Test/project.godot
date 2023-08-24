@@ -1,0 +1,13 @@
+config_version=5
+
+[application]
+
+config/name="First Procedural 3D Terrain Test"
+run/main_scene="res://node_3d.tscn"
+config/features=PackedStringArray("4.1", "Mobile")
+config/icon="res://icon.svg"
+config/tags=PackedStringArray("3d", "prototype", "procedural", "archived")
+
+[rendering]
+
+renderer/rendering_method="mobile"

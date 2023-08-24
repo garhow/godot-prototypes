@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ambulance.obj-0b5080d340122dc8417e33b37a62f9db.mesh"
+
+[deps]
+
+files=[ "res://.import/ambulance.obj-0b5080d340122dc8417e33b37a62f9db.mesh" ]
+
+source_file="res://models/kenney_carkit/Models/OBJ format/ambulance.obj"
+dest_files=[ "res://.import/ambulance.obj-0b5080d340122dc8417e33b37a62f9db.mesh", "res://.import/ambulance.obj-0b5080d340122dc8417e33b37a62f9db.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

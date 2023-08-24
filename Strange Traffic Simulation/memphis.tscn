@@ -1,0 +1,202 @@
+[gd_scene load_steps=18 format=3 uid="uid://dx6ikubxh4lub"]
+
+[ext_resource type="PackedScene" uid="uid://csb0nfsele21t" path="res://tiles/straight_road.tscn" id="3_23kqm"]
+[ext_resource type="PackedScene" uid="uid://bv7bcn3pjq6na" path="res://tiles/bent_road.tscn" id="3_ldrdq"]
+[ext_resource type="Script" path="res://Player.gd" id="5_8ci80"]
+[ext_resource type="PackedScene" uid="uid://iorr2rouohd1" path="res://tiles/cross_road.tscn" id="5_56sq6"]
+[ext_resource type="PackedScene" uid="uid://cx3y2aoyoa6ln" path="res://tiles/intersection.tscn" id="6_sgkij"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r7il6"]
+sky_top_color = Color(0.352941, 0.52549, 0.572549, 1)
+sky_horizon_color = Color(0.560784, 0.678431, 0.705882, 1)
+ground_bottom_color = Color(0.133333, 0.188235, 0.168627, 1)
+ground_horizon_color = Color(0.439216, 0.584314, 0.54902, 1)
+
+[sub_resource type="Sky" id="Sky_yhdkx"]
+sky_material = SubResource("ProceduralSkyMaterial_r7il6")
+
+[sub_resource type="Environment" id="Environment_kwb73"]
+background_mode = 2
+sky = SubResource("Sky_yhdkx")
+fog_light_energy = 16.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_j7hi5"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_frkqt"]
+radius = 0.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_u2bbf"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6t8w0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ajf17"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dnro5"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rb5pk"]
+albedo_color = Color(0.239216, 0.439216, 0.294118, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xpt52"]
+material = SubResource("StandardMaterial3D_rb5pk")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vdlsj"]
+size = Vector3(1, 0, 1)
+
+[node name="Memphis" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.965926, 0.224144, -0.12941, 0, 0.5, 0.866025, 0.258819, -0.836516, 0.482963, 0, 0, 0)
+sky_mode = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kwb73")
+
+[node name="Spawn Road" parent="." instance=ExtResource("3_23kqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+spawn_vehicle = true
+
+[node name="Straight Road8" parent="." node_paths=PackedStringArray("left_path", "right_path") instance=ExtResource("5_56sq6")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, -2, 0, -1)
+left_path = NodePath("../Straight Road7/Left Path/Straight Path")
+right_path = NodePath("../Straight Road7/Right Path/Straight Path")
+
+[node name="Bent Road7" parent="." node_paths=PackedStringArray("left_path", "right_path") instance=ExtResource("3_ldrdq")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, -3, 0, -1)
+left_path = NodePath("../Bent Road4/Left Path/Path")
+right_path = NodePath("../Bent Road4/Right Path/Path")
+
+[node name="Bent Road8" parent="." node_paths=PackedStringArray("left_path", "right_path") instance=ExtResource("3_ldrdq")]
+transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, -3, 0, -2)
+left_path = NodePath("../Bent Road5/Left Path/Path")
+right_path = NodePath("../Bent Road5/Right Path/Path")
+
+[node name="Bent Road9" parent="." node_paths=PackedStringArray("left_path", "right_path") instance=ExtResource("3_ldrdq")]
+transform = Transform3D(1, 0, 1.78814e-07, 0, 1, 0, -1.78814e-07, 0, 1, -2, 0, -2)
+left_path = NodePath("../Bent Road6/Left Path/Path")
+right_path = NodePath("../Bent Road6/Right Path/Path")
+
+[node name="Straight Road3" parent="." instance=ExtResource("3_23kqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="Straight Road5" parent="." instance=ExtResource("3_23kqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="Straight Road6" parent="." instance=ExtResource("3_23kqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="Bent Road" parent="." instance=ExtResource("3_ldrdq")]
+transform = Transform3D(-0.999999, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -0.999999, -2, 0, 0)
+
+[node name="Bent Road3" parent="." instance=ExtResource("3_ldrdq")]
+transform = Transform3D(0.999999, 0, 1.74845e-07, 0, 1, 0, -1.74845e-07, 0, 0.999999, 2, 0, -1)
+
+[node name="Straight Road7" parent="." instance=ExtResource("5_56sq6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Bent Road4" parent="." instance=ExtResource("3_ldrdq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Bent Road5" parent="." instance=ExtResource("3_ldrdq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, 1)
+
+[node name="Bent Road6" parent="." instance=ExtResource("3_ldrdq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 1)
+
+[node name="Cross Road" parent="." instance=ExtResource("5_56sq6")]
+
+[node name="Cross Road2" parent="." instance=ExtResource("5_56sq6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="Intersection" parent="." instance=ExtResource("6_sgkij")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="Cross Road3" parent="." instance=ExtResource("5_56sq6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Cross Road4" parent="." instance=ExtResource("5_56sq6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="Intersection2" parent="." instance=ExtResource("6_sgkij")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 2)
+
+[node name="Bent Road10" parent="." node_paths=PackedStringArray("left_path", "right_path") instance=ExtResource("3_ldrdq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, 2)
+left_path = NodePath("../Bent Road/Left Path/Path")
+right_path = NodePath("../Bent Road/Right Path/Path")
+
+[node name="Bent Road2" parent="." instance=ExtResource("3_ldrdq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 1)
+
+[node name="Bent Road11" parent="." instance=ExtResource("3_ldrdq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="Bent Road12" parent="." instance=ExtResource("3_ldrdq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 2)
+
+[node name="Bent Road13" parent="." instance=ExtResource("3_ldrdq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+
+[node name="Bent Road14" parent="." instance=ExtResource("3_ldrdq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -2)
+
+[node name="Bent Road15" parent="." instance=ExtResource("3_ldrdq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, -3)
+
+[node name="Bent Road16" parent="." instance=ExtResource("3_ldrdq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, -2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+visible = false
+mesh = SubResource("SphereMesh_j7hi5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+visible = false
+shape = SubResource("SphereShape3D_frkqt")
+
+[node name="Rigid" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0443184, 0.866126, 0)
+collision_mask = 7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Rigid"]
+mesh = SubResource("SphereMesh_u2bbf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rigid"]
+shape = SubResource("SphereShape3D_frkqt")
+
+[node name="CharacterBody" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera", "area")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.55, 0.15, -0.5)
+collision_mask = 7
+script = ExtResource("5_8ci80")
+camera = NodePath("Camera3D")
+area = NodePath("Area")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody"]
+mesh = SubResource("CapsuleMesh_6t8w0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody"]
+shape = SubResource("CapsuleShape3D_ajf17")
+
+[node name="Area" type="Area3D" parent="CharacterBody"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody/Area"]
+shape = SubResource("BoxShape3D_dnro5")
+
+[node name="Grass" type="StaticBody3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+collision_layer = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grass"]
+mesh = SubResource("PlaneMesh_xpt52")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass"]
+shape = SubResource("BoxShape3D_vdlsj")

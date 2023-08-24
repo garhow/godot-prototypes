@@ -1,0 +1,63 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://textures/kenney_prototypetextures/PNG/Green/texture_09.png" type="Texture" id=1]
+[ext_resource path="res://scenes/vehicles/truck.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/vehicles/tractor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/game/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/vehicles/racecar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/vehicles/police.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/vehicles/firetruck.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/maps/terrain.tscn" type="PackedScene" id=8]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 0.1, 0.1, 0.1 )
+uv1_triplanar = true
+
+[sub_resource type="ProceduralSky" id=2]
+ground_bottom_color = Color( 0.129412, 0.282353, 0.0862745, 1 )
+ground_horizon_color = Color( 0.345098, 0.619608, 0.447059, 1 )
+
+[sub_resource type="Environment" id=3]
+background_mode = 2
+background_sky = SubResource( 2 )
+auto_exposure_enabled = true
+
+[node name="Test Level" type="Spatial"]
+
+[node name="CSGCombiner" type="CSGCombiner" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -29, 0 )
+width = 300.0
+height = 5.0
+depth = 300.0
+material = SubResource( 1 )
+
+[node name="Police Car" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 4, 2, -7 )
+
+[node name="Racecar" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, 0 )
+
+[node name="Tractor" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -5, 2, 0 )
+
+[node name="Pickup Truck" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -6 )
+
+[node name="Firetruck" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 1, 5, -2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.965926, 0.224144, 0.12941, 0.0655769, -0.695633, 0.715398, 0.250374, -0.682535, -0.686628, 20.6024, 69.7903, -78.3762 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+
+[node name="Terrain" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -46, 0 )

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cgvh8k7ut3avv"
+path="res://.godot/imported/road_split.obj-c524d87797a5a4531021680c1e56dc39.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_split.obj-c524d87797a5a4531021680c1e56dc39.mesh"]
+
+source_file="res://models/kenney_city-kit-roads/Models/OBJ format/road_split.obj"
+dest_files=["res://.godot/imported/road_split.obj-c524d87797a5a4531021680c1e56dc39.mesh", "res://.godot/imported/road_split.obj-c524d87797a5a4531021680c1e56dc39.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

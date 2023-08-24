@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c4517b2l5qys4"
+path="res://.godot/imported/road_bendBarrier.obj-2accc1505136f8a2782d18af537fde3f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_bendBarrier.obj-2accc1505136f8a2782d18af537fde3f.mesh"]
+
+source_file="res://models/kenney_city-kit-roads/Models/OBJ format/road_bendBarrier.obj"
+dest_files=["res://.godot/imported/road_bendBarrier.obj-2accc1505136f8a2782d18af537fde3f.mesh", "res://.godot/imported/road_bendBarrier.obj-2accc1505136f8a2782d18af537fde3f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

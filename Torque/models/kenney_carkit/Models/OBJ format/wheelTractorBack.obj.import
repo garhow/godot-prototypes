@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wheelTractorBack.obj-3959d05139624fdb556aca5804f17fbd.mesh"
+
+[deps]
+
+files=[ "res://.import/wheelTractorBack.obj-3959d05139624fdb556aca5804f17fbd.mesh" ]
+
+source_file="res://models/kenney_carkit/Models/OBJ format/wheelTractorBack.obj"
+dest_files=[ "res://.import/wheelTractorBack.obj-3959d05139624fdb556aca5804f17fbd.mesh", "res://.import/wheelTractorBack.obj-3959d05139624fdb556aca5804f17fbd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c8n02dnda0ywn"
+path="res://.godot/imported/tractorPolice.obj-98adb0ece9c8c373b734c7ab95e159fa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tractorPolice.obj-98adb0ece9c8c373b734c7ab95e159fa.mesh"]
+
+source_file="res://models/kenney_car-kit/Models/OBJ format/tractorPolice.obj"
+dest_files=["res://.godot/imported/tractorPolice.obj-98adb0ece9c8c373b734c7ab95e159fa.mesh", "res://.godot/imported/tractorPolice.obj-98adb0ece9c8c373b734c7ab95e159fa.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cwbm8jj24k04b"
+path="res://.godot/imported/police.obj-d0f6124e7934ba1805d0ed9732796025.mesh"
+
+[deps]
+
+files=["res://.godot/imported/police.obj-d0f6124e7934ba1805d0ed9732796025.mesh"]
+
+source_file="res://models/kenney_car-kit/Models/OBJ format/police.obj"
+dest_files=["res://.godot/imported/police.obj-d0f6124e7934ba1805d0ed9732796025.mesh", "res://.godot/imported/police.obj-d0f6124e7934ba1805d0ed9732796025.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

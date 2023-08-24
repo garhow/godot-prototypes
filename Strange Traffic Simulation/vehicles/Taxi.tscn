@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgqbyesj4e5ns"]
+
+[ext_resource type="Script" path="res://Vehicle.gd" id="1_2ibtd"]
+[ext_resource type="ArrayMesh" uid="uid://cwrqn38u5ubhh" path="res://models/kenney_car-kit/Models/OBJ format/taxi.obj" id="2_o67yw"]
+
+[node name="Taxi" type="PathFollow3D" node_paths=PackedStringArray("raycast")]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0, 0)
+rotation_mode = 2
+cubic_interp = false
+loop = false
+script = ExtResource("1_2ibtd")
+raycast = NodePath("Raycast")
+
+[node name="Raycast" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, 1)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+mesh = ExtResource("2_o67yw")

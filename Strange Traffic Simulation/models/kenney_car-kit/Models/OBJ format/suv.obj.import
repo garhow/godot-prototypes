@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bco6s2jlbvw55"
+path="res://.godot/imported/suv.obj-5906a9aadf1398a69ec98e903ab5c30d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/suv.obj-5906a9aadf1398a69ec98e903ab5c30d.mesh"]
+
+source_file="res://models/kenney_car-kit/Models/OBJ format/suv.obj"
+dest_files=["res://.godot/imported/suv.obj-5906a9aadf1398a69ec98e903ab5c30d.mesh", "res://.godot/imported/suv.obj-5906a9aadf1398a69ec98e903ab5c30d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d12lbp4b25j25"
+path="res://.godot/imported/sedanSports.obj-1392607a0f5854b8d2ff763f5cc1b9f5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sedanSports.obj-1392607a0f5854b8d2ff763f5cc1b9f5.mesh"]
+
+source_file="res://models/kenney_car-kit/Models/OBJ format/sedanSports.obj"
+dest_files=["res://.godot/imported/sedanSports.obj-1392607a0f5854b8d2ff763f5cc1b9f5.mesh", "res://.godot/imported/sedanSports.obj-1392607a0f5854b8d2ff763f5cc1b9f5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://cfpwf6663ik6k"]
+
+[ext_resource type="Texture2D" uid="uid://bbr6alwqedptj" path="res://textures/stages/test/backgrounds/stars.png" id="1_ob7kw"]
+[ext_resource type="PackedScene" uid="uid://c03d8w08fxgca" path="res://scenes/controllers/bunny.tscn" id="2_33ym8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tpmso"]
+radius = 256.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_opxeq"]
+radius = 256.0
+height = 512.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_whoni"]
+radius = 64.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_quoey"]
+radius = 64.0
+height = 128.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tl62f"]
+radius = 128.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_nh8in"]
+radius = 128.0
+height = 256.0
+
+[node name="Test Stage" type="Node2D"]
+
+[node name="Big Planet" type="StaticBody2D" parent="." groups=["Planets"]]
+position = Vector2(0, 512)
+
+[node name="Collision" type="CollisionShape2D" parent="Big Planet"]
+shape = SubResource( "CircleShape2D_tpmso" )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Big Planet"]
+mesh = SubResource( "SphereMesh_opxeq" )
+
+[node name="Small Planet" type="StaticBody2D" parent="." groups=["Planets"]]
+position = Vector2(0, -256)
+
+[node name="Collision" type="CollisionShape2D" parent="Small Planet"]
+shape = SubResource( "CircleShape2D_whoni" )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Small Planet"]
+mesh = SubResource( "SphereMesh_quoey" )
+
+[node name="Medium Planet" type="StaticBody2D" parent="." groups=["Planets"]]
+position = Vector2(-256, 0)
+
+[node name="Collision" type="CollisionShape2D" parent="Medium Planet"]
+shape = SubResource( "CircleShape2D_tl62f" )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Medium Planet"]
+mesh = SubResource( "SphereMesh_nh8in" )
+
+[node name="Bunny" parent="." instance=ExtResource( "2_33ym8" )]
+
+[node name="Parallax" type="ParallaxBackground" parent="."]
+
+[node name="Stars" type="ParallaxLayer" parent="Parallax"]
+texture_filter = 1
+texture_repeat = 2
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Sprite" type="Sprite2D" parent="Parallax/Stars"]
+scale = Vector2(3, 3)
+texture = ExtResource( "1_ob7kw" )

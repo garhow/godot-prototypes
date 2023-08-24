@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://brdr8y8nb0pon"]
+
+[ext_resource type="Script" path="res://Vehicle.gd" id="1_asr7y"]
+[ext_resource type="ArrayMesh" uid="uid://brq1avs7i27go" path="res://models/kenney_car-kit/Models/OBJ format/sedan.obj" id="2_sqicu"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8yh3u"]
+points = PackedVector3Array(-0.540171, 0.019866, -0.646428, 0.786111, 0.835936, 0.441545, 0.505006, 0.712521, 1.07488, -0.446595, 1.28632, -0.555473, 0.634025, 0.2, -1.16609, -0.580604, 0.2, 1.15299, 0.522811, 0.0168394, 0.709976, -0.652656, 0.408569, -1.23046, 0.455061, 1.2747, -0.54591, -0.769444, 0.835936, 0.441545, -0.421254, 1.25041, 0.189681, 0.513992, 0.713803, -1.18099, -0.523766, 0.712521, 1.07488, 0.634025, 0.2, 1.11609, 0.437918, 1.2504, 0.18968, -0.580246, 0.0530949, 0.747557, -0.574848, 0.75828, -1.19148, 0.521891, 0.0179559, -0.721658, 0.669323, 0.408569, -1.23046, -0.617358, 0.2, -1.16609, 0.630495, 0.408569, 1.21944, -0.613828, 0.408569, 1.21944, -0.769444, 0.680365, 0.441545, -0.50608, 0.0169172, 0.74672, 0.786111, 0.680365, 0.441545, 0.630495, 0.408569, -1.26944, 0.598649, 0.0513586, 0.712851, -0.509295, 0.0130128, -0.727179, 0.786111, 0.835936, 0.286111, -0.769444, 0.835936, 0.286111, -0.580604, 0.2, -1.20299, -0.613828, 0.408569, -1.26944)
+
+[node name="Sedan" type="PathFollow3D" node_paths=PackedStringArray("raycast")]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0, 0)
+cubic_interp = false
+loop = false
+tilt_enabled = false
+script = ExtResource("1_asr7y")
+raycast = NodePath("Raycast")
+
+[node name="Raycast" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="Body" type="CharacterBody3D" parent="."]
+collision_layer = 2
+collision_mask = 3
+
+[node name="Collision" type="CollisionShape3D" parent="Body"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_8yh3u")
+
+[node name="Mesh" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+mesh = ExtResource("2_sqicu")
+skeleton = NodePath("../../..")

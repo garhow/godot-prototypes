@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://eu4vpu2unbqh"
+path="res://.godot/imported/road_bridge.obj-bb8fd8585699307d0387ef5570d1b1ca.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_bridge.obj-bb8fd8585699307d0387ef5570d1b1ca.mesh"]
+
+source_file="res://models/kenney_city-kit-roads/Models/OBJ format/road_bridge.obj"
+dest_files=["res://.godot/imported/road_bridge.obj-bb8fd8585699307d0387ef5570d1b1ca.mesh", "res://.godot/imported/road_bridge.obj-bb8fd8585699307d0387ef5570d1b1ca.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

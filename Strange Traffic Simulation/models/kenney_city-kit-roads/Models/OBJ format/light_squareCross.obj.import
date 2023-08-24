@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b4p2soyqs4rj1"
+path="res://.godot/imported/light_squareCross.obj-7a93212bd9187e1968f929ce6a52d084.mesh"
+
+[deps]
+
+files=["res://.godot/imported/light_squareCross.obj-7a93212bd9187e1968f929ce6a52d084.mesh"]
+
+source_file="res://models/kenney_city-kit-roads/Models/OBJ format/light_squareCross.obj"
+dest_files=["res://.godot/imported/light_squareCross.obj-7a93212bd9187e1968f929ce6a52d084.mesh", "res://.godot/imported/light_squareCross.obj-7a93212bd9187e1968f929ce6a52d084.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

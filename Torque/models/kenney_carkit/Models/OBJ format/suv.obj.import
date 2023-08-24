@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/suv.obj-366858e4572ef387312c118ae64926bd.mesh"
+
+[deps]
+
+files=[ "res://.import/suv.obj-366858e4572ef387312c118ae64926bd.mesh" ]
+
+source_file="res://models/kenney_carkit/Models/OBJ format/suv.obj"
+dest_files=[ "res://.import/suv.obj-366858e4572ef387312c118ae64926bd.mesh", "res://.import/suv.obj-366858e4572ef387312c118ae64926bd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

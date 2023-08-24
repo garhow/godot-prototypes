@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djgvdfg67j5xs"
+path="res://.godot/imported/road_curveIntersectionBarrier.obj-b2768ef35db329dffe59d3c2bf1d32cc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_curveIntersectionBarrier.obj-b2768ef35db329dffe59d3c2bf1d32cc.mesh"]
+
+source_file="res://models/kenney_city-kit-roads/Models/OBJ format/road_curveIntersectionBarrier.obj"
+dest_files=["res://.godot/imported/road_curveIntersectionBarrier.obj-b2768ef35db329dffe59d3c2bf1d32cc.mesh", "res://.godot/imported/road_curveIntersectionBarrier.obj-b2768ef35db329dffe59d3c2bf1d32cc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
